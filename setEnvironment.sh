@@ -6,9 +6,16 @@
 # git directory
 gitDir=~/git/dotfiles
 
-# tmux Config
-ln -sf $gitDir/tmux/.tmux.conf ~/.tmux.conf
+# Make parent .config directory
+mkdir -p ~/.config
+
+# tmux config
+cp -r $gitDir/tmux/.tmux.conf ~/.tmux.conf
 
 # Xresources and Xdefault
-ln -sf $gitDir/Xresources/.Xresources ~/.Xresources
-ln -sf $gitDir/Xresources/.Xdefault ~/.Xdefault
+cp -r $gitDir/Xresources/.Xresources ~/.Xresources
+cp -r $gitDir/Xresources/.Xdefault ~/.Xdefault
+
+# neofetch
+
+cp -r $gitDir/config/neofetch ~/.config/neofetch
