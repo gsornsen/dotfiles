@@ -19,5 +19,9 @@ cp -r $gitDir/Xresources/.Xdefault ~/.Xdefault
 # neofetch
 cp -r $gitDir/config/neofetch ~/.config/neofetch
 
+# ncmpcpp
+mkdir -p ~/.ncmpcpp
+cp -r $gitDir/ncmpcpp/config ~/.ncmpcpp/config
+
 # mopidy
 sudo cp -r $gitDir/mopidy/mopidy.conf /etc/mopidy/mopidy.conf
