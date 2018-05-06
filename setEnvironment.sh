@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Create symbolic links for dotfiles. This way, we can keep
-# all of our systems to to date using git.
+# Let's move our dotfiles into their proper places. This way
+# I can use the same configurations across all machines.
 
 # git directory
 gitDir=~/git/dotfiles
@@ -17,5 +17,7 @@ cp -r $gitDir/Xresources/.Xresources ~/.Xresources
 cp -r $gitDir/Xresources/.Xdefault ~/.Xdefault
 
 # neofetch
-
 cp -r $gitDir/config/neofetch ~/.config/neofetch
+
+# mopidy
+sudo cp -r $gitDir/mopidy/mopidy.conf /etc/mopidy/mopidy.conf
