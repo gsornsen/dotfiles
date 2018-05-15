@@ -32,3 +32,6 @@ sudo apt install mopidy mopidy-spotify
 # Configure mopidy
 cp -r $gitDir/mopidy/org.gnome.mopidyfifo.desktop ~/.config/autostart
 sudo cp -r $gitDir/mopidy/mopidy.conf /etc/mopidy/mopidy.conf
+
+# Configure nvim
+cp -r $gitDir/nvim ~/.config/ 
