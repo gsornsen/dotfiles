@@ -36,6 +36,9 @@ Plug 'vim-airline/vim-airline-themes'
 " tmuxline in nvim
 Plug 'edkolev/tmuxline.vim'
 
+" Highlight color codes
+Plug 'chrisbra/Colorizer'
+
 " Initialize plugin system
 call plug#end()
 
@@ -92,12 +95,18 @@ set nu
 " Start NERDTree automatically
 " autocmd vimenter * NERDTree
 
+" Start Colorizer automatically
+autocmd VImEnter * ColorHighlight .
+
 " air-line config
+set guifont=DejaVu\ Sans:s12
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+let g:airline_symbols.space = "\ua0"
+set encoding=utf-8
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -113,11 +122,15 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+" Tmuxline config
+let g:tmuxline_separators = {
+    \ 'left' : '»',
+    \ 'left_alt': '',
+    \ 'right' : '«',
+    \ 'right_alt' : '',
+    \ 'space' : "\ua0"}
+
+" For tmuxline + vim-airline integration
+let g:airline#extensions#tmuxline#enabled = 1
+" Start tmuxline even without nvim running
+let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"

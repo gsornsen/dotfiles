@@ -34,3 +34,16 @@
 ! white
 *.color7:       #504339
 *.color15:      #9a875f
+
+Xft.dpi: 192
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+xrandr --dpi 192
+
+rofi.color-window: argb: EE000000, argb: EE000000, argb: EE000000
+rofi.color-normal: argb: 00000000, #DEDEDE, argb: 00000000, #DEDEDE
